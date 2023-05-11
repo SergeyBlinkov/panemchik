@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "prettier": "^2.8.4",
+    "styled-components": "^5.3.9"
+  }
+}
