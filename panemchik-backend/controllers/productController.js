@@ -48,7 +48,17 @@ class productController {
       return ApiError.BadRequest("не удалось получить список", e.message);
     }
   }
-  async getCurrent(req, res) {}
+  async getCurrent(req, res) {
+    try {
+      const id = req.url.match(/[0-9]/g).join('')
+      const product = await Product.findOne({where: {id},include:[{model:ProductPrice, as: 'price'}]})
+      const productDto = new ProductDTO(product)
+      console.log(productDto)
+      return res.json(productDto)
+    } catch(e) {
+      return ApiError.BadRequest('Пользователь с этим ID не найден, либо произошла непредвиденная ошибка',e.message)
+    }
+  }
 }
 
 module.exports = new productController();
