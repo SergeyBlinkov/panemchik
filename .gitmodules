@@ -1,0 +1,3 @@
+[submodule "panemchik-frontend"]
+	path = panemchik-frontend
+	url = https://github.com/SergeyBlinkov/noveltyConveyor
