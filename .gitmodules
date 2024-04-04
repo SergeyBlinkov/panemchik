@@ -1,4 +1,4 @@
 [submodule "panemchik-frontend"]
 	path = panemchik-frontend
-	url = https://github.com/SergeyBlinkov/noveltyConveyor
+	url = https://github.com/SergeyBlinkov/panemchik-frontend
 	branch = master
